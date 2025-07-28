@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>KCMC Church | Welcome</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +22,7 @@
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                         Language
@@ -79,7 +80,11 @@
 <!-- Services -->
 <section id="services" class="bg-light py-5">
     <div class="container text-center">
-        <h2 class="section-title">Weekly Services</h2>
+        <h2 class="section-title">
+            <span data-lang="en">Weekly Services</span>
+            <span data-lang="mm" class="d-none">တပတ်တာ အစီအစဥ်များ</span>
+            <span data-lang="ch" class="d-none">教会每周服务</span>
+        </h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 shadow">
@@ -168,27 +173,168 @@
         </button>
     </div>
 </section>
+
+<!-- church activities -->
+<section id="activities" class="py-5 text-center bg-light">
+    <div class="container">
+        <h2 class="section-title mb-4">
+            <span data-lang="en">Church Activities</span>
+            <span data-lang="mm" class="d-none">ဘုရားရှိခိုးကျောင်းလှုပ်ရှားမှုများ</span>
+        </h2>
+        <p class="mb-5">
+            <span data-lang="en">Click on any activity to view more photos and details.</span>
+            <span data-lang="mm" class="d-none">အသေးစိတ်နှင့်ဓာတ်ပုံများကြည့်ရန် လှုပ်ရှားမှုတစ်ခုခုကို နှိပ်ပါ။</span>
+        </p>
+
+        <div id="activityCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <a href="html/sunday-worship.html" class="text-decoration-none">
+                                <div class="card shadow h-100">
+                                    <img src="rsc/home-activities/sunday-worship.png" class="card-img-top"
+                                         alt="Sunday Worship">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sunday Worship</h5>
+                                        <p class="card-text">Weekly worship with sermons and praise.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="html/2023-bago-summer-camp.html" class="text-decoration-none">
+                                <div class="card shadow h-100">
+                                    <img src="rsc/home-activities/2023-bago-summer-camp.jpg" class="card-img-top"
+                                         alt="Youth Fellowship">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2023 Bago Summer Camps</h5>
+                                        <p class="card-text">Building faith and friendship for the young.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--<div class="col-md-4">
+                            <a href="activity-christmas.html" class="text-decoration-none">
+                                <div class="card shadow h-100">
+                                    <img src="https://source.unsplash.com/600x400/?christmas,church"
+                                         class="card-img-top" alt="Christmas Celebration">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Christmas Celebration</h5>
+                                        <p class="card-text">Annual event filled with music and joy.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>-->
+                </div>
+
+                <!--<div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <a href="activity-easter.html" class="text-decoration-none">
+                                <div class="card shadow h-100">
+                                    <img src="https://source.unsplash.com/600x400/?easter,church" class="card-img-top"
+                                         alt="Easter Service">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Easter Service</h5>
+                                        <p class="card-text">Celebrating the resurrection of Christ.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="activity-retreat.html" class="text-decoration-none">
+                                <div class="card shadow h-100">
+                                    <img src="https://source.unsplash.com/600x400/?retreat,church" class="card-img-top"
+                                         alt="Church Retreat">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Church Retreat</h5>
+                                        <p class="card-text">Spiritual growth and bonding weekend.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="activity-baptism.html" class="text-decoration-none">
+                                <div class="card shadow h-100">
+                                    <img src="https://source.unsplash.com/600x400/?baptism,faith" class="card-img-top"
+                                         alt="Baptism Ceremony">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Baptism Ceremony</h5>
+                                        <p class="card-text">Welcoming new members into the faith.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#activityCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#activityCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Contact Us-->
 <section id="location" class="py-5 bg-white text-center">
     <div class="container">
         <h2 class="section-title mb-4">
             <span data-lang="en">Visit Our Church</span>
             <span data-lang="mm" class="d-none">ကျွန်ုပ်တို့၏ဘုရားရှိခိုးကျောင်းတည်နေရာ</span>
         </h2>
-        <p class="mb-4">
+        <p class="mb-5">
             <span data-lang="en">You're always welcome at Kamayut Christ Methodist Church.</span>
-            <span data-lang="mm" class="d-none">ကမ္မရာဇ်ခရစ်Methodistဘုရားရှိခိုးကျောင်းတွင် သင်အမြဲမကြာခဏကြိုဆိုခံရပါသည်။</span>
+            <span data-lang="mm" class="d-none">ကမာရွှတ် ခရစ်တော် မက်ဒရစ် ဘုရားကျောင်းမှ ကြိုဆိုပါတယ်</span>
         </p>
 
-        <div class="ratio ratio-16x9 shadow rounded">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1223.586417417979!2d96.12609089513492!3d16.840309121560315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194c1608f87ff%3A0x4200edb80a416f2e!2sKamayut%20Christ%20Methodist%20Church!5e0!3m2!1sen!2sus!4v1721902503000!5m2!1sen!2sus"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="row g-4 align-items-center text-start">
+            <!-- Google Map -->
+            <div class="col-lg-6">
+                <div class="ratio ratio-4x3 rounded shadow">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1223.586417417979!2d96.12609089513492!3d16.840309121560315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194c1608f87ff%3A0x4200edb80a416f2e!2sKamayut%20Christ%20Methodist%20Church!5e0!3m2!1sen!2sus!4v1721902503000!5m2!1sen!2sus"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-6">
+                <div class="p-3">
+                    <h5 class="mb-3">
+                        <span data-lang="en">Our Address</span>
+                        <span data-lang="mm" class="d-none">လိပ်စာ</span>
+                    </h5>
+                    <p>
+                        <span data-lang="en">Kamayut Christ Methodist Church<br>Corner of U Wisara & Insein Rd, Yangon, Myanmar</span>
+                        <span data-lang="mm" class="d-none">ကမာရွတ် ခရစ်တော် မက်ဒရစ် ဘုရားရှိခိုးကျောင်း<br>ဦးဝိသာရနှင့်အင်းစိန်လမ်းထောင့်၊ ရန်ကုန်မြို့။</span>
+                    </p>
+
+                    <h5 class="mb-3 mt-4">
+                        <span data-lang="en">Contact Us</span>
+                        <span data-lang="mm" class="d-none">ဆက်သွယ်ရန်</span>
+                    </h5>
+                    <p>
+            <span data-lang="en">
+              📞 Phone: +95 9 123 456 789<br>
+              📧 Email: info@kcmc.church
+            </span>
+                        <span data-lang="mm" class="d-none">
+              📞 ဖုန်း: +၉၅ ၉ ၁၂၃ ၄၅၆ ၇၈၉<br>
+              📧 အီးမေးလ်: info@kcmc.church
+            </span>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
